@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/garbage-classification?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&tinyInt1isBit=false
+    username: root
+    password: 数据库密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/garbage-classification
+mybatis-plus:
+  mapper-locations: classpath:cn/czh0123/garbageclassification/mapper/**.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    root: info
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+ai-scan-path: 识别图片路径
+wx-login:
+  appid: 微信appid
+  secret: 微信secret
+  grant_type: 微信grant_type
